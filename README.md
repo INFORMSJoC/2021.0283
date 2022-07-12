@@ -66,6 +66,7 @@ See M. Pelegrín and M.Cerulli (2021) "A tactical deconfliction instances genera
 - -f   \["instance_file_name"\] \[instance\] (print generated instance to a file with a specific name)
 - -seed	\[random_seed\] \[14\]
 - -mode	\[0,...,15/ "CP","RCP","RP","RRP","GP","RGP","PR2","R2","SP","RSP","PL","RPL","QP","RQP","PR3","R3"\] \[6\]
+	
 	0/"CP": circle
         1/"RCP": random circle        
         2/"RP": rhomboidal
@@ -139,18 +140,13 @@ Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyh
 - -maxc       \[max number of conflicts for a fixed aircraft\] \[n-1\]
 - -nc         \[desired number of conflicts\] \[round( pc*(n/2)*((1+maxc)/2) )\]
 - -airconfig  \["W-N"/"N-S"/"W-E"/"W-U"/"N-U"/"U-D"/"all"\]  \[all\]
-        "W-N": initial positions in West and North
 
+        "W-N": initial positions in West and North
         "N-S": initial positions in North and South     
-        
-        "W-E": initial positions in West and East
-        
-        "W-U": initial positions in West and Upper      (only 3D)
-        
-        "N-U": initial positions in North and Upper     (only 3D)
-        
-        "U-D": initial positions in Upper and Bottom    (only 3D)
-        
+        "W-E": initial positions in West and East        
+        "W-U": initial positions in West and Upper      (only 3D)        
+        "N-U": initial positions in North and Upper     (only 3D)        
+        "U-D": initial positions in Upper and Bottom    (only 3D)        
         "all": initial positions in the 4 borders of the rectangle (2D) or the 6 faces of the parallelepiped (3D)
 
 ### **Remarks**
@@ -163,7 +159,7 @@ The corresponding scenario will be polyhedral, with 3 horizontal planes and 2 ve
 
 
 ### **Usage examples**
-
+```
 0. CP - Circle problem: ./generator -mode 0 -vmin 380 -vmax 400 -r 220
 1. RCP - Random circle problem: ./generator -mode RCP -r 300 -seed 15 -secInixd 90
 2. RP - Rhomboidal problem: ./generator -mode 2 -w 8 -h 8 -nx 1 -ny 1 
@@ -180,7 +176,7 @@ The corresponding scenario will be polyhedral, with 3 horizontal planes and 2 ve
 13. RQP - Random cubic problem: ./generator -mode RQP -HP 4 -my 2 3 4 -dVP 20 -vmax 500
 14. PR3 - 3D pseudo-random problem: ./generator -mode PR3 -n 30 -nc 15 -airconfig 'W-U'
 15. R3- 3D random problem: ./generator -mode 15 -n 40 -a 200 -h 200 -w 200
-
+```
 ### **Output format**
 
 The program will produce 2 files:
