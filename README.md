@@ -140,15 +140,13 @@ Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyh
 - -maxc       \[max number of conflicts for a fixed aircraft\] \[n-1\]
 - -nc         \[desired number of conflicts\] \[round( pc*(n/2)*((1+maxc)/2) )\]
 - -airconfig  \["W-N"/"N-S"/"W-E"/"W-U"/"N-U"/"U-D"/"all"\]  \[all\]
-
-        "W-N": initial positions in West and North
+	"W-N": initial positions in West and North
         "N-S": initial positions in North and South     
         "W-E": initial positions in West and East        
         "W-U": initial positions in West and Upper      (only 3D)        
         "N-U": initial positions in North and Upper     (only 3D)        
         "U-D": initial positions in Upper and Bottom    (only 3D)        
         "all": initial positions in the 4 borders of the rectangle (2D) or the 6 faces of the parallelepiped (3D)
-
 ### **Remarks**
 
 * In grid problems alpha will be set to M_PI/2 (i.e. 90°), in cubic problems both alpha and beta will be set to M_PI/2 (i.e. 90°).
