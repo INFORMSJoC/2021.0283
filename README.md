@@ -40,7 +40,7 @@ The [src](https://github.com/MartinaCerulli/TDInstancesGenerator/tree/main/src) 
 
 
 ## Generating instances
-### **Compilation**
+### **Compile the program**
 In order to compile the program, type:
 
 `g++ generator-TD.cpp -o generator`
