@@ -1,3 +1,9 @@
+/*---------------------------------------------------------------------------------------
+This program is an implementation of the benchmark generator in the paper "Aircraft conflict resolution:  A benchmark generator", 
+written by Mercedes Pelegrín and Martina Cerulli.
+---------------------------------------------------------------------------------------
+See file LICENSE at the root of the git project for licence information.
+-----------------------------------------------------------------------------------------*/
 #include <stdio.h>
 #include <fstream>
 #include <iostream>
