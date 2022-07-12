@@ -1,8 +1,30 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
 # Benchmarking Instances Generator for Aircraft Conflict Resolution
-This project contains data files (.cpp code and user manual) for the generator presented in the paper M. Pelegrín & M. Cerulli (2021) "Aircraft conflict resolution: A benchmark generator".
+This archive is distributed in association with the [INFORMS Journal on Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
+The software and data in this repository are a snapshot of the software and data that were used in the research reported on in the paper 
+"Aircraft conflict resolution: A benchmark generator" by  M. Pelegrín and M. Cerulli.
+
+# Cite
+
+To cite this software, please cite the [paper]() using its DOI and the software itself, using the following DOI.
+
+[![DOI](https://zenodo.org/badge/285853815.svg)]()
+
+Below is the BibTex for citing this version of the code.
+
+```
+@article{TDinstancesGenerator,
+  author =        {Pelegrín, M. and Cerulli, M.},
+  publisher =     {INFORMS Journal on Computing},
+  title =         {TD instances generator},
+  year =          {2022},
+  doi =           {},
+  url =           {},
+}  
+
+# Description
 Aircraft Conflict Resolution is one of the major tasks of computer-aided Air Traffic Management and represents a challenging optimization problem. This code generates benchmarking instances, each of them consisting of a set of flights with initial positions and vectors of velocities.
 
 You will be able to generate:
@@ -15,8 +37,6 @@ You will be able to generate:
 
 The [src](https://github.com/CDR-lib/TD-InstancesGenerator/tree/main/src) folder contains generator's source (.cpp) code. The [scripts](https://github.com/CDR-lib/TD-InstancesGenerator/tree/main/scripts) folder contains bash scripts which can be executed to perform the computational study reported in Section 4 of the paper. In the [results](https://github.com/CDR-lib/TD-InstancesGenerator/tree/main/figures) folder the figures associated to different generable configurations included in the paper are collected to illustrate the potential outputs of the generator. Finally, in the [ToyExamples](https://github.com/CDR-lib/TD-InstancesGenerator/tree/main/ToyExamples) folder, we report the outputs of the generator when generating two easy circle instances, differing only in the speed range of the aircraft. Some explanations on these outputs are provided in the [ToyExampleOutputs.pdf](https://github.com/CDR-lib/TD-InstancesGenerator/blob/main/ToyExamples/ToyExampleOutputs.pdf) file.
 
-# Citing
-Pelegrín M. and Cerulli M. (2021) Benchmarking instances generator for aircraft conflict resolution. 
 
 # Generating instances and replicating results
 When using the generator to produce instances to test, different parameters should be tuned. A detailed description of each of this parameters and their default values can be found in the [User Manual](https://github.com/CDR-lib/TD-InstancesGenerator/blob/main/USER-MANUAL.txt). 
