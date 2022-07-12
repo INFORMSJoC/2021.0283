@@ -59,7 +59,7 @@ The coordinates of initial positions of aircraft are represented with the follow
 (x0,y0,z0)=(radius\*cos(*theta*)\*sin(*phi*),radius\*sin(*theta*)\*sin(*phi*),radius\*cos(*phi*))) for 3D instances,
 (x0,y0)=(radius\*cos(*theta*), radius\*sin(*theta*)) for 2D instances.
 
-See M. Pelegrín and M.Cerulli (2022) "Aircraft conflict resolution: A benchmark generator", for more details.
+See M. Pelegrín and M. Cerulli (2022) "Aircraft conflict resolution: A benchmark generator", for more details.
 
 **General flags**
 - -V   \[\] \[verbose=off\] (set verbose output on, for pseudo-random configuration)
