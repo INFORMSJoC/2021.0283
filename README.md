@@ -98,7 +98,7 @@ See M. Pelegrín and M. Cerulli (2022) "Aircraft conflict resolution: A benchmar
 - -secInixd   \[lower bound for *theta* in degrees\] \[0\]
 - -secAngxd   \[amplitude of the sector containing *theta* in degrees\] \[360\]
 
-ONLY SPHERE, *phi* in \[secIniz,secIniz+secAngz\]; alternatively, *phi* in \[secInizd,secInizd+secAngzd\]
+ONLY SPHERE: *phi* in \[secIniz,secIniz+secAngz\]; alternatively, *phi* in \[secInizd,secInizd+secAngzd\]
 - -secIniz    \[lower bound for *phi* in radians\] \[0\]   
 - -secAngz    \[amplitude of the sector containing *phi* in radians\] \[\pi\]  
 - -secInizd   \[lower bound for *phi* in degrees\] \[0\] 
