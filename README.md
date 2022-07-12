@@ -40,12 +40,12 @@ The [src](https://github.com/MartinaCerulli/TDInstancesGenerator/tree/main/src) 
 
 
 ## Generating instances
-### **COMPILATION**
+### **Compilation**
 In order to compile the program, type:
 
 `g++ generator-TD.cpp -o generator`
 
-### **HOW TO RUN THE PROGRAM**
+### **Run the program**
 To run the program, type:
 
 `./generator \[FLAG\] \[value\]`
@@ -66,37 +66,21 @@ See M. Pelegrín and M.Cerulli (2021) "A tactical deconfliction instances genera
 - -f   \["instance_file_name"\] \[instance\] (print generated instance to a file with a specific name)
 - -seed	\[random_seed\] \[14\]
 - -mode	\[0,...,15/ "CP","RCP","RP","RRP","GP","RGP","PR2","R2","SP","RSP","PL","RPL","QP","RQP","PR3","R3"\] \[6\]
-
-        0/"CP": circle
-
-        1/"RCP": random circle
-        
+	0/"CP": circle
+        1/"RCP": random circle        
         2/"RP": rhomboidal
-        
-        3/"RRP": random rhomboidal
-        
-        4/"GP": grid
-        
-        5/"RGP": random grid
-        
-        6/"PR2": 2D pseudo-random
-        
-        7/"R2": 2D random 
-        
-        8/"SP": sphere
-        
-        9/"RSP": random sphere
-        
-        10/"PL": polyhedral
-        
-        11/"RPL": random polyhedral
-        
-        12/"QP": cubic
-        
+        3/"RRP": random rhomboidal        
+        4/"GP": grid        
+        5/"RGP": random grid        
+        6/"PR2": 2D pseudo-random        
+        7/"R2": 2D random        
+        8/"SP": sphere        
+        9/"RSP": random sphere        
+        10/"PL": polyhedral        
+        11/"RPL": random polyhedral        
+        12/"QP": cubic 
         13/"RQP": random cubic
-        
-        14/"PR3": 3D pseudo-random
-        
+        14/"PR3": 3D pseudo-random        
         15/"R3": 3D random
 - -n      \[number of aircraft\] \[10 if mode is not in {2,3,4,5,10,11,12,13}\] 
 - -vmin   \[min_speed\] \[400\]
@@ -169,7 +153,7 @@ Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyh
         
         "all": initial positions in the 4 borders of the rectangle (2D) or the 6 faces of the parallelepiped (3D)
 
-### **REMARKS**
+### **Remarks**
 
 * In grid problems alpha will be set to M_PI/2 (i.e. 90°), in cubic problems both alpha and beta will be set to M_PI/2 (i.e. 90°).
 * In polyhedral/cubic instances it is possible to insert a different value of mx, my, mz, alpha, alphad, beta, betad for each horizontal plane. 
@@ -178,7 +162,7 @@ The corresponding scenario will be polyhedral, with 3 horizontal planes and 2 ve
 * In polyhedral/cubic instances, each of the options dx, dy, dz, nx, ny, and nz, corresponds to a single value, which will be the same for every horizontal/vertical plane.
 
 
-### **USAGE EXAMPLES**
+### **Usage examples**
 
 0. CP - Circle problem: ./generator -mode 0 -vmin 380 -vmax 400 -r 220
 1. RCP - Random circle problem: ./generator -mode RCP -r 300 -seed 15 -secInixd 90
@@ -197,7 +181,7 @@ The corresponding scenario will be polyhedral, with 3 horizontal planes and 2 ve
 14. PR3 - 3D pseudo-random problem: ./generator -mode PR3 -n 30 -nc 15 -airconfig 'W-U'
 15. R3- 3D random problem: ./generator -mode 15 -n 40 -a 200 -h 200 -w 200
 
-### **OUTPUT FORMAT**
+### **Output format**
 
 The program will produce 2 files:
 
