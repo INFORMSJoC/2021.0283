@@ -175,7 +175,7 @@ The corresponding scenario will be polyhedral, with 3 horizontal planes and 2 ve
 12. QP - Cubic problem: ./generator -mode 12 -HP 3 -mx 3 3 -my 4 4 4 -dHP 30
 13. RQP - Random cubic problem: ./generator -mode RQP -HP 4 -my 2 3 4 -dVP 20 -vmax 500
 14. PR3 - 3D pseudo-random problem: ./generator -mode PR3 -n 30 -nc 15 -airconfig 'W-U'
-15. R3- 3D random problem: ./generator -mode 15 -n 40 -a 200 -h 200 -w 200
+15. R3 - 3D random problem: ./generator -mode 15 -n 40 -a 200 -h 200 -w 200
 ```
 ### **Output format**
 
