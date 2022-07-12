@@ -40,7 +40,11 @@ The [src](https://github.com/MartinaCerulli/TDInstancesGenerator/tree/main/src) 
 
 
 ## Generating instances and replicating results
-When using the generator to produce instances to test, different parameters should be tuned. A detailed description of each of this parameters and their default values can be found in the [User Manual](https://github.com/MartinaCerulli/TDInstancesGenerator/blob/main/USER-MANUAL.txt). 
+In order to compile the program, type:
+
+`g++ generator-TD.cpp -o generator`
+
+When running the generator to produce instances to test, different parameters should be tuned. A detailed description of each of this parameters and their default values can be found in the [User Manual](https://github.com/MartinaCerulli/TDInstancesGenerator/blob/main/USER-MANUAL.txt). 
 
 If the generated instances are used as testbed, besides citing the paper "Aircraft conflict resolution: A benchmark generator", please specify to which values the different parameters are set. In this way, if anyone wants to use the same set of instances for testing purpose, it will only suffice to use the same values for the involved parameters.
 
