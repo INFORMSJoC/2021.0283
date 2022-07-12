@@ -105,6 +105,7 @@ ONLY SPHERE, *phi* in \[secIniz,secIniz+secAngz\]; alternatively, *phi* in \[sec
 - -secAngzd   \[amplitude of the sector containing *phi* in degrees\] \[\pi\]     
 
 **Flags for rhomboidal (mode in {2,3}), grid (mode in {4,5}), polyhedral (mode in {10,11}), and cubic problems (mode in {12,13})** 
+
 Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyhedral and cubic ones (3D) contain both horizontal and vertical planes. In all cases: horizontal planes contain horizontal and slopping trails; vertical planes only contain slopping trails.
 - -HP         \[number of horizontal planes (HPs)\] \[3\]   (only polyhedral)
 - -VP         \[number of vertical planes (VPs)\] \[2\]     (only polyhedral)
@@ -126,6 +127,7 @@ Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyh
 - -betad      \[list of slopes in degrees of slopping trails at the different vertical planes, separated by spaces\] \[120 120\] (only polyhedral)
 
 **Flags for random predefined scenarios (modes 1,3,5 and 9,11,13)**
+
 (angle=predefined_angle+dev, dev in \[hamin,hamax\])
 - -hamin  \[min heading angle deviation\] \[-\pi/6\]
 - -hamax  \[max heading angle deviation\] \[\pi/6\]
@@ -149,7 +151,6 @@ Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyh
         "U-D": initial positions in Upper and Bottom    (only 3D)        
         "all": initial positions in the 4 borders of the rectangle (2D) or the 6 faces of the parallelepiped (3D)
 ### **Remarks**
-
 * In grid problems alpha will be set to M_PI/2 (i.e. 90°), in cubic problems both alpha and beta will be set to M_PI/2 (i.e. 90°).
 * In polyhedral/cubic instances it is possible to insert a different value of mx, my, mz, alpha, alphad, beta, betad for each horizontal plane. 
 For example the user could type: `./generator -mode PL -HP 3 -VP 2 -mx 2 3 5 -my 1 -alphad 45 60 100 -beta 3.14159`.
