@@ -48,7 +48,7 @@ In order to compile the program, type:
 ### **Run the program**
 To run the program, type:
 
-`./generator \[FLAG\] \[value\]`
+`./generator [FLAG] [value]`
 
 In the following, we list the different flags that can be used with their associated values with the format:
 
