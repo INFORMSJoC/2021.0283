@@ -56,8 +56,8 @@ FLAG	\[value\] \[default_value\]
 
 The coordinates of initial positions of aircraft are represented with the following notation:
 
-(x0,y0,z0)=(radius\*cos(*theta*)\*sin(*phi*),radius\*sin(*theta*)*sin(*phi*),radius\*cos(*phi*))) for 3D instances,
-(x0,y0)=(radius\*cos(*theta*), radius*sin(*theta*)) for 2D instances.
+(x0,y0,z0)=(radius\*cos(*theta*)\*sin(*phi*),radius\*sin(*theta*)\*sin(*phi*),radius\*cos(*phi*))) for 3D instances,
+(x0,y0)=(radius\*cos(*theta*), radius\*sin(*theta*)) for 2D instances.
 
 See M. Pelegrín and M.Cerulli (2021) "A tactical deconfliction instances generator", for more details.
 
@@ -94,7 +94,7 @@ See M. Pelegrín and M.Cerulli (2021) "A tactical deconfliction instances genera
 
 *theta* in \[secInix,secInix+secAngx\]; alternatively, *theta* in \[secInixd,secInixd+secAngxd\]
 - -secInix    \[lower bound for *theta* in radians\] \[0\]
-- -secAngx    \[amplitude of the sector containing *theta* in radians\] \[2*\pi\]
+- -secAngx    \[amplitude of the sector containing *theta* in radians\] \[2\*\pi\]
 - -secInixd   \[lower bound for *theta* in degrees\] \[0\]
 - -secAngxd   \[amplitude of the sector containing *theta* in degrees\] \[360\]
 
@@ -108,18 +108,18 @@ ONLY SPHERE, *phi* in \[secIniz,secIniz+secAngz\]; alternatively, *phi* in \[sec
 Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyhedral and cubic ones (3D) contain both horizontal and vertical planes. In all cases: horizontal planes contain horizontal and slopping trails; vertical planes only contain slopping trails.
 - -HP         \[number of horizontal planes (HPs)\] \[3\]   (only polyhedral)
 - -VP         \[number of vertical planes (VPs)\] \[2\]     (only polyhedral)
-- -dHP        \[distance between consecutive HPs\] \[3*D\]  (only polyhedral)
-- -dVP        \[distance between consecutive VPs\] \[3*D\]  (only polyhedral)
+- -dHP        \[distance between consecutive HPs\] \[3\*D\]  (only polyhedral)
+- -dVP        \[distance between consecutive VPs\] \[3\*D\]  (only polyhedral)
 - -mx         \[list of number of horizontal trails at each horizontal plane, separated by spaces\] \[2 2 2\]
 - -my         \[list of number of slopping trails at each horizontal plane, separated by spaces\] \[2 2 2\]      
 - -mz         \[list of number of slopping trails at each vertical plane, separated by spaces\] \[2 2\]  (only polyhedral)
 - -nx         \[number of aircraft on each horizontal trail\] \[1\]
 - -ny         \[number of aircraft on each slopping trail located at a horizontal plane\] \[1\]
 - -nz         \[number of aircraft on each slopping trail located at a vertical plane\] \[1\] (only polyhedral)
-- -dx         \[distance between consecutive horizontal trails (on the same plane, if polyhedral)\] \[3*D\] 
-- -dy         \[distance between consecutive slopping trails (on the same horizontal plane, if polyhedral)\] \[3*D\]  
-- -dz         \[distance between consecutive slopping trails on the same vertical plane\] \[3*D\]  (only polyhedral)
-- -d_aircraft \[distance between consecutive aircraft on the same trail\] \[2*D\] 
+- -dx         \[distance between consecutive horizontal trails (on the same plane, if polyhedral)\] \[3\*D\] 
+- -dy         \[distance between consecutive slopping trails (on the same horizontal plane, if polyhedral)\] \[3\*D\]  
+- -dz         \[distance between consecutive slopping trails on the same vertical plane\] \[3\*D\]  (only polyhedral)
+- -d_aircraft \[distance between consecutive aircraft on the same trail\] \[2\*D\] 
 - -alpha      \[list of slopes in radians of slopping trails at the different horizontal planes, separated by spaces\] \[\pi/6 \pi/6 \pi/6\](polyhedral/cubic) \[\pi/4\](rhomboidal/grid)
 - -alphad     \[list of slopes in degrees of slopping trails at the different horizontal planes, separated by spaces\] \[30 30 30\](polyhedral/cubic) \[45\](rhomboidal/grid)
 - -beta       \[list of slopes in radians of slopping trails at the different vertical planes, separated by spaces\] \[2\pi/3 2\pi/3\] (only polyhedral)
@@ -138,8 +138,9 @@ Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyh
 **Flags for pseudo-random problems**
 - -pc         \[probability of conflict\] \[0.5\]
 - -maxc       \[max number of conflicts for a fixed aircraft\] \[n-1\]
-- -nc         \[desired number of conflicts\] \[round( pc*(n/2)*((1+maxc)/2) )\]
+- -nc         \[desired number of conflicts\] \[round( pc\*(n/2)\*((1+maxc)/2) )\]
 - -airconfig  \["W-N"/"N-S"/"W-E"/"W-U"/"N-U"/"U-D"/"all"\]  \[all\]
+
 	"W-N": initial positions in West and North
         "N-S": initial positions in North and South     
         "W-E": initial positions in West and East        
@@ -152,7 +153,7 @@ Rhomboidal and grid scenarios (2D) only contain a single horizontal plane. Polyh
 * In grid problems alpha will be set to M_PI/2 (i.e. 90°), in cubic problems both alpha and beta will be set to M_PI/2 (i.e. 90°).
 * In polyhedral/cubic instances it is possible to insert a different value of mx, my, mz, alpha, alphad, beta, betad for each horizontal plane. 
 For example the user could type: `./generator -mode PL -HP 3 -VP 2 -mx 2 3 5 -my 1 -alphad 45 60 100 -beta 3.14159`.
-The corresponding scenario will be polyhedral, with 3 horizontal planes and 2 vertical planes. The first horizontal plane will have 2 horizontal trails and 1 slopping trail with a slope of 45°. The second horizontal plane will have 3 horizontal trails and 2 vertical trails (default value, since the user inserted only one value for my) with a slope of 60°. The third horizontal plane will have 5 horizontal trails and 2 vertical trails (default value) with a slope of 100°. The first vertical plane will have 2 vertical trails (default value, since the user inserted no value for mz) with a slope of M_PI. Finally, the last vertical plane will have 2 vertical trails (default value) with a slope of 2*M_PI/3  (default value, since the user inserted only one value for beta).
+The corresponding scenario will be polyhedral, with 3 horizontal planes and 2 vertical planes. The first horizontal plane will have 2 horizontal trails and 1 slopping trail with a slope of 45°. The second horizontal plane will have 3 horizontal trails and 2 vertical trails (default value, since the user inserted only one value for my) with a slope of 60°. The third horizontal plane will have 5 horizontal trails and 2 vertical trails (default value) with a slope of 100°. The first vertical plane will have 2 vertical trails (default value, since the user inserted no value for mz) with a slope of M_PI. Finally, the last vertical plane will have 2 vertical trails (default value) with a slope of 2\*M_PI/3  (default value, since the user inserted only one value for beta).
 * In polyhedral/cubic instances, each of the options dx, dy, dz, nx, ny, and nz, corresponds to a single value, which will be the same for every horizontal/vertical plane.
 
 
