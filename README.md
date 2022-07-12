@@ -3,7 +3,7 @@
 # Benchmarking Instances Generator for Aircraft Conflict Resolution
 This archive is distributed in association with the [INFORMS Journal on Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-The software and data in this repository are a snapshot of the software and data that were used in the research reported on in the paper 
+The software and data in this repository are a snapshot of the software and data that were used in the research reported on the paper 
 "Aircraft conflict resolution: A benchmark generator" by  M. Pelegrín and M. Cerulli.
 
 # Cite
