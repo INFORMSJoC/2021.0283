@@ -2,7 +2,10 @@
 This program is an implementation of the benchmark generator in the paper "Aircraft conflict resolution:  A benchmark generator", 
 written by Mercedes Pelegrín and Martina Cerulli.
 ---------------------------------------------------------------------------------------
-See file LICENSE at the root of the git project for licence information.
+This code is licensed under the MIT license.
+Copyright <2021> <Ecole Polytechnique - IP Paris>
+See file LICENSE at the root of the git project for other information about the copyright notice and 
+the permission notice that shall be included in all copies or substantial portions of this code.
 -----------------------------------------------------------------------------------------*/
 #include <stdio.h>
 #include <fstream>
