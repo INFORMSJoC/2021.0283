@@ -8,7 +8,7 @@ The software and data in this repository are a snapshot of the software and data
 
 ## Cite
 
-To cite this software, please cite the [paper]() using its DOI and the software itself, using the following DOI.
+To cite this software, please cite the paper using its DOI and the software itself, using the following DOI.
 
 [![DOI](https://zenodo.org/badge/285853815.svg)]()
 
@@ -18,10 +18,10 @@ Below is the BibTex for citing this version of the code.
 @article{TDinstancesGenerator,
   author =        {Pelegrín, M. and Cerulli, M.},
   publisher =     {INFORMS Journal on Computing},
-  title =         {TD instances generator},
+  title =         {Benchmarking Instances Generator for Aircraft Conflict Resolution},
   year =          {2022},
   doi =           {},
-  url =           {},
+  url =           {https://github.com/INFORMSJoC/2021.0283},
 }  
 ```
 
