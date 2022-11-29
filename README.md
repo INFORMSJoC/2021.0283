@@ -10,7 +10,7 @@ The software and data in this repository are a snapshot of the software and data
 
 To cite this software, please cite the paper using its DOI and the software itself, using the following DOI.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6884667.svg)](https://doi.org/10.5281/zenodo.6884667)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7377734.svg)](https://doi.org/10.5281/zenodo.7377734)
 
 Below is the BibTex for citing this version of the code.
 
@@ -20,7 +20,7 @@ Below is the BibTex for citing this version of the code.
   publisher =     {INFORMS Journal on Computing},
   title =         {Benchmarking Instances Generator for Aircraft Conflict Resolution v2021.0283},
   year =          {2022},
-  doi =           {10.5281/zenodo.6884667},
+  doi =           {10.5281/zenodo.7377734},
   url =           {https://github.com/INFORMSJoC/2021.0283},
 }  
 ```
