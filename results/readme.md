@@ -1,5 +1,5 @@
 ### Generating paper instances
-Once compiled the generator, the executable file `./generator` is produced in the current working directory. In the following, we report the commands that can be used to generate the instances illustrated in the different sections of the paper and collected in this folder. 
+Once the generator is compiled, the executable file `./generator` is produced in the current working directory. In the following, we report the commands that can be used to generate the instances illustrated in the different sections of the paper and collected in this folder. 
 ## Circle instances
 - Figure 1a: `./generator -mode CP -n 10`
 - Figure 1b: `./generator -mode CP -n 10 -secInixd 20 -secAngxd 50 -seed 14`
